@@ -8,8 +8,10 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')  # Redirect to home after registration
+            return redirect('home')
+        else:
+            return render(request, 'html/users/register.html', {'form': form,'error': 'Invalid form submission'})
     else:
         form = UserCreationForm()
-    return render(request, 'users/register.html', {'form': form})
+        return render(request, 'html/users/register.html', {'form': form})
 

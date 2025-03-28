@@ -1,4 +1,4 @@
-{% extends 'diary/base.html' %}
+{% extends '../base.html' %}
 
 {% block title %}Register{% endblock %}
 
@@ -10,4 +10,11 @@
     <button type="submit" class="btn btn-success">Register</button>
 </form>
 <p>Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+
+{% if error%}
+<script>
+alert("Invalid Form Submission");
+</script>
+{%endif%}
+
 {% endblock %}
