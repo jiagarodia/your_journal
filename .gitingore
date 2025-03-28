@@ -1,31 +1,13 @@
-# Byte-compiled / cached
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment
-venv/
-env/
-
-# Django / Database
-db.sqlite3
-*.sqlite3
-
-# Logs
-logs/
-*.log
-
-# Static / Media Files (if generated dynamically)
-staticfiles/
-media/
-
-# VS Code
-.vscode/
-
-# Environment variables
+venv
 .env
-*.env
-
-# Migrations (optional, if you want to keep track of them)
-**/migrations/*.py
-!**/migrations/__init__.py
+db.sqlite3
+# Python Files
+*.log
+*.pot
+*.pyc
+.idea/*
+__pycache__/
+db.sqlite3
+*/migrations/
+!*/migrations/_init_.py
+test_files
