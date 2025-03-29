@@ -9,9 +9,9 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="">Home</a>
-        <a class="nav-link " href="#">New Entry</a>
-        <a class="nav-link" href="#">Edit Entry</a>
-        <a class="nav-link " href="#">LogOut </a>
+        <a class="nav-link " href="{% url 'new' %}">New Entry</a>
+        <a class="nav-link" href="{% url 'edit/<int:entry_id>' %}">Edit Entry</a>
+        <a class="nav-link " href="{% url 'logout' %}">LogOut </a>
       </div>
     </div>
   </div>
