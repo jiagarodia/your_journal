@@ -1,13 +1,17 @@
-{% extends 'diary/base.html' %}
+{% extends '../base.html' %}
 
 {% block title %}New Entry{% endblock %}
 
 {% block content %}
 <h2>New Diary Entry</h2>
+<div class="form-floating">
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+    <label for="floatingTextarea2">New entry</label>
+</div>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-success">Save Entry</button>
+    <button type="submit" class="btn btn-primary">Save</button>
 </form>
 <a href="{% url 'home' %}">Back to Home</a>
 {% endblock %}
