@@ -4,22 +4,16 @@
 
 {% block content %}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-       <h1>Welcome!!</h1>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">New Entry</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">LogOut</a>
-          </li>
-        </ul>
+  <div class="container-fluid">
+    <h1 class="navbar-brand">Welcome!!!</h1>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        <a class="nav-link " href="{% url 'new_entry' %}">New Entry</a>
+        <a class="nav-link" href="{% url 'edit_entry' %}">Edit Entry</a>
+        <a class="nav-link " href="{% url 'logout' %}">LogOut </a>
       </div>
     </div>
-  </nav>
-
+  </div>
+</nav>
 {% endblock %}
