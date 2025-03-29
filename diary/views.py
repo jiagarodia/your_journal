@@ -2,9 +2,13 @@
 
 
 from django.shortcuts import render
+from .models import DiaryEntry
 
 def home(request):
-    return render(request, 'html/diary/home.html')
+    context = {
+        'diaryentry': DiaryEntry.objects.all()
+    }
+    return render(request, 'html/diary/home.html', context)
 
 def new_entry(request):
     return render(request, 'html/diary/new_entry.html')
