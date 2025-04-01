@@ -29,7 +29,8 @@
         <p>{{ entry.content }}</p>  
         <small class="text-muted">Created on: {{ entry.created_at|date:"F d, Y H:i" }}</small>
         <br>
-        <a href="{% url 'edit_entry' entry.id %}" class="btn btn-sm btn-primary">Edit</a>
+        <a href="{% url 'edit_entry' entry.id %}" class="btn btn-sm btn-primary">Edit</a> 
+        
       </li>
     {% endfor %}
   </ul>
