@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import DiaryEntry
 from django.contrib.auth.decorators import login_required
 
@@ -11,6 +11,16 @@ def home(request):
 @login_required
 def new_entry(request):
     return render(request, 'html/diary/new_entry.html')
+        # if request.method == 'POST':
+        #     form = DiaryEntry(request.POST)
+        #     if form.is_valid():
+        #         entry = form.save(commit=False)
+        #         entry.user = request.user  
+        #         entry.save()
+        #         return redirect('home')  
+        # else:
+        #     form = DiaryEntry()
+        # return render(request, 'new_entry.html', {'form': form})
 
 
 @login_required
