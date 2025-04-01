@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 
 def register(request):
     if request.method == 'POST':
@@ -14,4 +14,7 @@ def register(request):
     else:
         form = UserCreationForm()
         return render(request, 'html/users/register.html', {'form': form})
-
+    
+def user_logout(request):
+    logout(request)
+    return redirect('login')

@@ -10,6 +10,10 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="">Home</a>
         <a class="nav-link " href="{% url 'new_entry' %}">New Entry</a>
+        <form action="{% url 'logout' %}" method="post" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-link nav-link">LogOut</button>
+        </form>
         
       </div>
     </div>
